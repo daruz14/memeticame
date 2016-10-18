@@ -131,6 +131,7 @@ public class GcmListenerService extends com.google.android.gms.gcm.GcmListenerSe
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.mipmap.ic_launcher)
                         .setContentTitle(title)
+                        .setAutoCancel(true)
                         .setContentText(User.getUserOrCreate(this, sender).mName +": " + content)
                         .setContentIntent(pendingIntent);
 
@@ -140,6 +141,7 @@ public class GcmListenerService extends com.google.android.gms.gcm.GcmListenerSe
         NotificationManager mNotifyMgr =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
         // Builds the notification and issues it.
+        mBuilder.getNotification().flags |= Notification.FLAG_AUTO_CANCEL;
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
 
     }
@@ -159,17 +161,19 @@ public class GcmListenerService extends com.google.android.gms.gcm.GcmListenerSe
         NotificationCompat.Builder mBuilder =
                 new NotificationCompat.Builder(this)
                         .setSmallIcon(R.mipmap.ic_launcher)
-                        .setContentTitle("New Group")
+                        .setContentTitle("New Group: " + title)
+                        .setAutoCancel(true)
                         .setContentText("Invitation :D")
                         .addAction(R.mipmap.ic_acceptsss,"Accept",pendingIntent)
                         .addAction(R.mipmap.ic_acceptsss, "Decline", pendingIntent1);
 
-        mBuilder.setAutoCancel(true);
+        
         // Sets an ID for the notification
         int mNotificationId = 001;
         // Gets an instance of the NotificationManager service
         NotificationManager mNotifyMgr =
                 (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+        mBuilder.getNotification().flags |= Notification.FLAG_AUTO_CANCEL;
         // Builds the notification and issues it.
         mNotifyMgr.notify(mNotificationId, mBuilder.build());
 
