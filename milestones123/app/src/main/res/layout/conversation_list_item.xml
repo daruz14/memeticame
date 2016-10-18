@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/activity_horizontal_margin">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ConversationListItem.Title"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:text="Conversation title or user name"
+        android:textSize="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ConversationListItem.Photo"
+        android:layout_toEndOf="@+id/ConversationListItem.Photo" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/ConversationListItem.Photo"
+        android:src="@drawable/no_photo_single"
+        app:riv_corner_radius="30dip"
+        app:riv_border_width="0dip"
+        app:riv_border_color="#333333"
+        app:riv_mutate_background="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        app:riv_tile_mode="repeat"
+        app:riv_oval="true" />
+
+</RelativeLayout>

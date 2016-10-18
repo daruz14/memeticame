@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:padding="10dp"
+    android:background="@drawable/rounded_borders"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:padding="5dp"
+        android:src="@drawable/clip_icon"
+        android:id="@+id/MessageListItem.ClipImage"
+        android:layout_below="@+id/MessageListItem.Author"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Author"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/MessageListItem.Author"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="File name"
+        android:padding="5dp"
+        android:id="@+id/MessageListItem.FileName"
+        android:layout_below="@+id/MessageListItem.Author"
+        android:layout_toRightOf="@+id/MessageListItem.ClipImage"
+        android:layout_toEndOf="@+id/MessageListItem.ClipImage" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=""
+        android:id="@+id/MessageListItem.FileSize"
+        android:layout_below="@+id/MessageListItem.FileName"
+        android:layout_toRightOf="@+id/MessageListItem.ClipImage"
+        android:layout_toEndOf="@+id/MessageListItem.ClipImage" />
+</RelativeLayout>

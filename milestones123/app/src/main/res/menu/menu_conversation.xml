@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.mecolab.memeticameandroid.Activities.ConversationActivity">
+
+    <item android:id="@+id/action_send_generic_file" android:title="@string/send_file"
+        android:orderInCategory="96" app:showAsAction="never" />
+
+    <item android:id="@+id/action_send_photo" android:title="@string/send_photo"
+        android:orderInCategory="99" app:showAsAction="never" />
+
+    <item android:id="@+id/action_invite_contact" android:title="@string/invite_contact"
+        android:orderInCategory="100" app:showAsAction="never" />
+
+    <item android:id="@+id/action_settings" android:title="@string/action_settings"
+        android:orderInCategory="101" app:showAsAction="never" />
+</menu>

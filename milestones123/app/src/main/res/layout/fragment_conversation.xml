@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.mecolab.memeticameandroid.Fragments.ConversationFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/background"
+        android:scaleType ="centerCrop"
+        />
+
+    <com.rockerhieu.emojicon.EmojiconEditText
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@android:color/white"
+        android:id="@+id/ConversationFragment.NewMessageView"
+        android:hint="@string/ConversationFragment.NewMessage"
+
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/emoticon_button"
+        android:layout_toLeftOf="@+id/ConversationFragment.SendButton"
+        android:layout_toStartOf="@+id/ConversationFragment.SendButton" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/ConversationFragment.MessagesView"
+        android:divider="@android:color/transparent"
+        android:padding="10dp"
+        android:dividerHeight="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/emojicons" />
+
+    <ImageButton
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_send_white_18dp"
+        android:background="@color/dark_gray"
+        android:text="@string/ConversationFragment.OkButton"
+        android:id="@+id/ConversationFragment.SendButton"
+        android:layout_alignTop="@+id/ConversationFragment.NewMessageView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <FrameLayout
+        android:id="@+id/emojicons"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        android:visibility="gone"
+        android:layout_above="@+id/ConversationFragment.NewMessageView"
+        />
+
+    <ImageButton
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="12dp"
+        android:scaleType="centerInside"
+        android:adjustViewBounds="true"
+        android:background="@android:color/white"
+        android:id="@+id/emoticon_button"
+        android:src="@drawable/emoticon_icon"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>
